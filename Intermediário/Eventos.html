@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeh1(){
+            let input = document.getElementById("texto")
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerText = input.value;
+        }
+    </script>
+</head>
+<body>
+    
+    <h1>Clique em mim</h1>
+
+    <input id="texto" onchange="changeh1()" type="text">
+</body>
+</html>
