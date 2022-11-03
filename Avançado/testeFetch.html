@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>Informação:</h1>
+       <ul id="info"></ul>
+
+</body>
+<script>
+
+    const URL = "http://swapi.dev/api/people/1";
+    
+    fetch(URL)
+    .then(res => {
+        res.json().then(data => {
+            const ul = document.getElementById('info');
+            const li = document.createElement('li');
+            const h4 = document.createElement('h4');
+            h4.innerHTML = `${data.name}`;
+            ul.appendChild(li);
+            li.appendChild(h4);
+        })
+    })
+    
+.catch(err => console.error('Não foi poossível achar a informação', err)); 
+
+</script>
+</html>
