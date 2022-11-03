@@ -8,5 +8,43 @@
 </head>
 <body>
     
+<form>
+    <input type="button" value="Converter" onclick="converter()">
+</form>
+
+<h1 id="resultado"></h1>
 </body>
+<script>
+
+let url = 'https://swapi.dev/api/people/1/'
+
+function converter(){
+   // let input = document.getElementById('valor');
+   // let valor = input.value;
+
+    fetch(url)
+    .then((res) => {
+
+        return res.json()
+       
+    })
+    
+    fetch(url)
+    .then((res) => {
+
+        return res.json()
+       
+    })
+    .then((data) => {
+         
+        let name = data.name;
+
+        document.getElementById("resultado").innerHTML = name;
+    }) 
+   
+}
+
+
+</script>
 </html>
+
