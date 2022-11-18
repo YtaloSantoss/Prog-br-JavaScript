@@ -1,1 +1,2 @@
-console.log($("#novo").attr("name")); 
+//lendo
+//console.log($("#novo").attr("name")); 
