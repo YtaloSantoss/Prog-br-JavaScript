@@ -7,3 +7,4 @@ setTimeout(() =>{
     $("h1").removeClass("bg-blue")
 },3000)
 
+ 
